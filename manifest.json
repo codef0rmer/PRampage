@@ -1,0 +1,16 @@
+{
+  "name": "PRampage",
+  "version": "1.0.0",
+  "description": "Avoid rampage by enforcing PR review with @Mentions on GitHub.",
+  "icons": { "128": "icon.png" },
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    { "matches": ["http://github.com/*", "https://github.com/*"], "js": ["jquery.min.js", "content_script.js"] }
+  ],
+  "permissions": [
+    "tabs",
+    "http://github.com/*",
+    "https://github.com/*"
+  ],
+  "manifest_version": 2
+}
