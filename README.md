@@ -1,3 +1,3 @@
 # PRampage
 
-Avoid rampage by enforcing PR review with @Mentions on GitHub. Comment `LGTM` if Okay.
+A chrome extension to avoid rampage by enforcing PR review with @Mentions on GitHub. Comment `LGTM` if Okay.
