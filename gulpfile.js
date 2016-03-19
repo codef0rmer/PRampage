@@ -2,7 +2,7 @@ var gulp   = require('gulp');
 var uglify = require('gulp-uglify');
 
 gulp.task('copy', function(cb) {
-  return gulp.src(['chrome-extension/manifest.json', 'chrome-extension/images/'])
+  return gulp.src(['chrome-extension/manifest.json', 'chrome-extension/**/*.png'])
     .pipe(gulp.dest('dist/'));
 });
 

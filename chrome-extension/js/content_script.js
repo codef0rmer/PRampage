@@ -13,17 +13,17 @@ function PRampage() {
   var $mergeButton = $('.btn.js-merge-branch-action');
   var isOpen = $('.state.state-open').length === 1;
   var isCIRunning = isOpen && $mergeButton.length === 0;
-  var hasForcedReview = $('.pr-rampage').length > 0;
+  var hasForceReview = $('.pr-rampage').length > 0;
   var hasEverybodyReviewed = function() { return arrReviewer.length === arrReviewerApproved.length; };
   var allowToMerge = function() {
     $mergeButton.prop('disabled', false);
     $mergeButton.get(0).lastChild.textContent = '\n\rMerge pull request';
   };
-  var $forcedReview = $('<a style="cursor:pointer;" class="alt-merge-options pr-rampage">Merge without peer review?</a>');
+  var $forceReview = $('<a style="cursor:pointer;" class="alt-merge-options pr-rampage">Merge without peer review?</a>');
   var $commenter = $('#new_comment_field');
 
   if (isCIRunning) {
-    hasForcedReview && $('.pr-rampage').remove();
+    hasForceReview && $('.pr-rampage').remove();
     return;
   }
 
@@ -43,8 +43,8 @@ function PRampage() {
       $mergeButton.get(0).lastChild.textContent = arrReviewer.length > 0 ? '\n\rMerge approval pending' : '\n\rNo reviewer mentioned';
     }
 
-    if (!hasForcedReview) {
-      $mergeButton.parent().append($forcedReview);
+    if (!hasForceReview) {
+      $mergeButton.parent().append($forceReview);
       $('.pr-rampage').on('click', function() {
         allowToMerge();
         window.cancelAnimationFrame(simplPRInterval);
