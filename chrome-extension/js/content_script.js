@@ -19,7 +19,7 @@ function PRampage() {
     $mergeButton.prop('disabled', false);
     $mergeButton.get(0).lastChild.textContent = '\n\rMerge pull request';
   };
-  var $forceReview = $('<a style="cursor:pointer;" class="alt-merge-options pr-rampage">Merge without peer review?</a>');
+  var $forceReview = $('<a style="cursor:pointer;display:block !important;" class="alt-merge-options pr-rampage">Merge without peer review?</a>');
   var $commenter = $('#new_comment_field');
 
   if (isCIRunning) {
