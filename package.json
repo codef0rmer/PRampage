@@ -1,6 +1,6 @@
 {
   "name": "PRampage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Avoid rampage by enforcing PR review with @Mentions on GitHub",
   "main": "chrome-extension/manifest.json",
   "author": "codef0rmer <amit.2006.it@gmail.com>",
